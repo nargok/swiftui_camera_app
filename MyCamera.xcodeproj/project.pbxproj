@@ -15,6 +15,7 @@
 		28089678263A53180023A3B5 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28089677263A53180023A3B5 /* ActivityView.swift */; };
 		2808967C263A63C60023A3B5 /* PHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2808967B263A63C60023A3B5 /* PHPickerView.swift */; };
 		2808967F263A6FA00023A3B5 /* EffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2808967E263A6FA00023A3B5 /* EffectView.swift */; };
+		28089682263A80D70023A3B5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28089681263A80D70023A3B5 /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		28089677263A53180023A3B5 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		2808967B263A63C60023A3B5 /* PHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerView.swift; sourceTree = "<group>"; };
 		2808967E263A6FA00023A3B5 /* EffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectView.swift; sourceTree = "<group>"; };
+		28089681263A80D70023A3B5 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				280896622636338C0023A3B5 /* MyCameraApp.swift */,
 				280896642636338C0023A3B5 /* ContentView.swift */,
+				28089681263A80D70023A3B5 /* UIImageExtension.swift */,
 				2808967E263A6FA00023A3B5 /* EffectView.swift */,
 				2808967B263A63C60023A3B5 /* PHPickerView.swift */,
 				28089677263A53180023A3B5 /* ActivityView.swift */,
@@ -152,6 +155,7 @@
 			files = (
 				2808967C263A63C60023A3B5 /* PHPickerView.swift in Sources */,
 				280896652636338C0023A3B5 /* ContentView.swift in Sources */,
+				28089682263A80D70023A3B5 /* UIImageExtension.swift in Sources */,
 				28089678263A53180023A3B5 /* ActivityView.swift in Sources */,
 				2808967F263A6FA00023A3B5 /* EffectView.swift in Sources */,
 				28089673263633D90023A3B5 /* ImagePickerView.swift in Sources */,
