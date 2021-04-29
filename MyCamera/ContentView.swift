@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var captureImage: UIImage? = nil
     @State var isShowSheet = false
-    @State var isShowActivity = false
+    
     @State var isPhotolibrary = false
     @State var isShowAction = false
     
@@ -19,15 +19,8 @@ struct ContentView: View {
         VStack {
             Spacer()
             
-            if let unwrapCaptureImage = captureImage {
-                Image(uiImage: unwrapCaptureImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            }
-            
-            Spacer()
-            
             Button(action: {
+                captureImage = nil
                 isShowAction = true
             }) {
                 Text("カメラを起動する")
@@ -39,17 +32,19 @@ struct ContentView: View {
             }
             .padding()
             .sheet(isPresented: $isShowSheet) {
-                if isPhotolibrary {
-                    PHPickerView(
-                        isShowSheet: $isShowSheet, captureImage: $captureImage
-                    )
+                if let unwrapCaptureImage = captureImage {
+                    EffectView(isShowSheet: $isShowSheet, captureImage: unwrapCaptureImage)
                 } else {
-                    ImagePickerView(
-                        isShowSheet: $isShowSheet,
-                        captureImage: $captureImage)
-                    
+                    if isPhotolibrary {
+                        PHPickerView(
+                            isShowSheet: $isShowSheet, captureImage: $captureImage
+                        )
+                    } else {
+                        ImagePickerView(
+                            isShowSheet: $isShowSheet,
+                            captureImage: $captureImage)
+                    }
                 }
-                
             }
             .actionSheet(isPresented: $isShowAction) {
                 ActionSheet(title: Text("確認"),
@@ -69,23 +64,6 @@ struct ContentView: View {
                                 }),
                                 .cancel(),
                             ])
-            }
-            
-            Button(action: {
-                if let _ = captureImage {
-                    isShowActivity = true
-                }
-            }) {
-                Text("SNSに投稿する")
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 50)
-                    .multilineTextAlignment(.center)
-                    .background(Color.blue)
-                    .foregroundColor(Color.white)
-            }
-            .padding()
-            .sheet(isPresented: $isShowActivity) {
-                ActivityView(shareItems: [captureImage!])
             }
         }
     }
