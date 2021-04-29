@@ -61,7 +61,7 @@ struct EffectView: View {
             .padding()
             
             Button(action: {
-                
+                isShowActivity = true
             }) {
                 Text("シェア")
                     .frame(maxWidth: .infinity)
@@ -70,10 +70,14 @@ struct EffectView: View {
                     .background(Color.blue)
                     .foregroundColor(Color.white)
             }
+            .sheet(isPresented: $isShowActivity) {
+                ActivityView(shareItems: [showImage!])
+            }
             .padding()
             
+            
             Button(action: {
-                
+                isShowSheet = false
             }) {
                 Text("閉じる")
                     .frame(maxWidth: .infinity)
