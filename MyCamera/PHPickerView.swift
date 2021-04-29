@@ -37,10 +37,11 @@ struct PHPickerView: UIViewControllerRepresentable {
                         print("使用できる写真はありません")
                     }
                 }
+                parent.isShowSheet = true
             } else {
                 print("選択された写真はありません")
+                parent.isShowSheet = false
             }
-            parent.isShowSheet = false
         }
     }
     
