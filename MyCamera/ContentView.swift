@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var captureImage: UIImage? = nil
     @State var isShowSheet = false
+    @State var isShowActivity = false
     
     var body: some View {
         
@@ -45,6 +46,24 @@ struct ContentView: View {
                     isShowSheet: $isShowSheet,
                     captureImage: $captureImage)
             }
+            
+            Button(action: {
+                if let _ = captureImage {
+                    isShowActivity = true
+                }
+            }) {
+                Text("SNSに投稿する")
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .multilineTextAlignment(.center)
+                    .background(Color.blue)
+                    .foregroundColor(Color.white)
+            }
+            .padding()
+            .sheet(isPresented: $isShowActivity) {
+                ActivityView(shareItems: [captureImage])
+            }
+            
         }
     }
 }

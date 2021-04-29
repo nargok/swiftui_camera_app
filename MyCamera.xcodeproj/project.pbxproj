@@ -12,6 +12,7 @@
 		280896672636338E0023A3B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280896662636338E0023A3B5 /* Assets.xcassets */; };
 		2808966A2636338E0023A3B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280896692636338E0023A3B5 /* Preview Assets.xcassets */; };
 		28089673263633D90023A3B5 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28089672263633D90023A3B5 /* ImagePickerView.swift */; };
+		28089678263A53180023A3B5 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28089677263A53180023A3B5 /* ActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		280896692636338E0023A3B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2808966B2636338E0023A3B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28089672263633D90023A3B5 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		28089677263A53180023A3B5 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				280896622636338C0023A3B5 /* MyCameraApp.swift */,
 				280896642636338C0023A3B5 /* ContentView.swift */,
+				28089677263A53180023A3B5 /* ActivityView.swift */,
 				28089672263633D90023A3B5 /* ImagePickerView.swift */,
 				280896662636338E0023A3B5 /* Assets.xcassets */,
 				2808966B2636338E0023A3B5 /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				280896652636338C0023A3B5 /* ContentView.swift in Sources */,
+				28089678263A53180023A3B5 /* ActivityView.swift in Sources */,
 				28089673263633D90023A3B5 /* ImagePickerView.swift in Sources */,
 				280896632636338C0023A3B5 /* MyCameraApp.swift in Sources */,
 			);
